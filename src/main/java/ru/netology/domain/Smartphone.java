@@ -1,16 +1,10 @@
 package ru.netology.domain;
 
-import java.util.Objects;
-
 public class Smartphone extends Product {
     private String producer;
 
     public String getProducer() {
         return producer;
-    }
-
-    public void setProducer(String producer) {
-        this.producer = producer;
     }
 
     public Smartphone(int id, String name, int price, String producer) {
@@ -20,19 +14,5 @@ public class Smartphone extends Product {
 
     public Smartphone() {
         super();
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        Smartphone that = (Smartphone) o;
-        return producer.equals(that.producer);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), producer);
     }
 }
